@@ -11,6 +11,6 @@ public class HelloController {
     }
     @GetMapping("/ok")
     public String allesOk(){
-        return "Alles Ok";
+        return "Alles Ok und vielen dank";
     }
 }
