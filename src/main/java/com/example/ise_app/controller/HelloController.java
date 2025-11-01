@@ -7,12 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    private final String greeting;
-
-    // Spring injiziert hier den Wert aus ENV/Properties; Default = "Hallo ISE 🚀"
-    public HelloController(@Value("${GREETING:Entwicklung eines Buil- und Deploymentprozesses 🚀}") String greeting) {
-        this.greeting = greeting;
-    }
+    @Value("${GREETING:Hallo ISE 🚀}")
+    private String greeting;
 
     @GetMapping("/api/hello")
     public String hello() {
