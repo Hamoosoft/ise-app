@@ -72,7 +72,7 @@ jobs:
 
       # --------------------------------------------------------
       # 7) Docker: Login bei GHCR (nur auf main & Tags, nicht bei PRs)
-      #    Nutzt das eingebaute GITHUB_TOKEN mit obigen permissions.
+      #    nutzt das eingebaute GITHUB_TOKEN mit obigen permissions.
       # --------------------------------------------------------
       - name: Log in to GitHub Container Registry
         if: github.event_name != 'pull_request'
@@ -98,7 +98,7 @@ jobs:
             type=ref,event=tag   # mappe Git-Tags (z. B. v1.0.0) 1:1 auf das Image
 
       # 9) Docker-Image bauen & (auf main/tags) pushen
-      #    Auf PRs nur bauen (kein Push).
+      #    auf PRs nur bauen (kein Push).
       - name: Build and (conditionally) push Docker image
         uses: docker/build-push-action@v6
         with:
