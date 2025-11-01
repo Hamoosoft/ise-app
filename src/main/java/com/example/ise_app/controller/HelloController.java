@@ -10,7 +10,7 @@ public class HelloController {
     private final String greeting;
 
     // Spring injiziert hier den Wert aus ENV/Properties; Default = "Hallo ISE 🚀"
-    public HelloController(@Value("${GREETING:Hallo ISE 🚀}") String greeting) {
+    public HelloController(@Value("${GREETING:Hallo from ise 🚀}") String greeting) {
         this.greeting = greeting;
     }
 
