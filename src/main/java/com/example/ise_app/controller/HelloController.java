@@ -7,8 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    @Value("${GREETING:Hallo ISE 🚀}")
-    private String greeting;
+    private final String greeting;
+
+    public HelloController(@Value("${GREETING:Hallo ISE 🚀}") String greeting) {
+        this.greeting = greeting;
+    }
 
     @GetMapping("/api/hello")
     public String hello() {

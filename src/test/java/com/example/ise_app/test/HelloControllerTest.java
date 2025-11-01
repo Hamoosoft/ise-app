@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class HelloControllerTest {
     @Test
     void hello_returnsGreeting() {
-        HelloController ctrl = new HelloController();
+        HelloController ctrl = new HelloController("Hallo ISE 🚀");
         assertTrue(ctrl.hello().contains("Hallo ISE"));
     }
 }
