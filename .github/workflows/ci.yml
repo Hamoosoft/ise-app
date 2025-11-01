@@ -1,15 +1,7 @@
-# .github/workflows/ci.yml
-# ------------------------------------------------------------
-# CI/CD-Pipeline für ise-app
-# - Build & Tests mit Maven
-# - Upload von Testreports & JAR-Artefakt
-# - Docker-Image bauen und in GHCR pushen
-#   (Tagging: commit-sha, latest (auf main), Git-Tag bei Releases)
-# ------------------------------------------------------------
 
 name: CI Pipeline
 
-# WICHTIG: Rechte für das eingebaute GITHUB_TOKEN setzen
+# github token Berichtigung
 permissions:
   contents: read      # Code lesen
   packages: write     # in GHCR (GitHub Container Registry) pushen
