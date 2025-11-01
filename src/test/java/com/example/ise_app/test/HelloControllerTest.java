@@ -6,13 +6,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class HelloControllerTest {
+
     @Test
     void hello_returnsGreeting() {
-        HelloController controller = new HelloController();
-        String result = controller.hello();
-
-        assertNotNull(result);
-        assertTrue(result.contains("Hello"));
+        HelloController ctrl = new HelloController("Hallo ISE 🚀");
+        String resp = ctrl.hello();
+        assertTrue(resp.contains("Hallo ISE"));
     }
 }
-
