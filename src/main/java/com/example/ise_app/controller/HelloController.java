@@ -9,7 +9,7 @@ public class HelloController {
 
     private final String greeting;
 
-    public HelloController(@Value("${GREETING:Hallo ISE 🚀}") String greeting) {
+    public HelloController(@Value("${GREETING:Hallo ISE mohammed und rania 🚀}") String greeting) {
         this.greeting = greeting;
     }
 
